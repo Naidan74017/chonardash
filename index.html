@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Камнерезы Тувы</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-gem"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="lica.html">Лица Искусства</a>
+            <a href="ctati.html">Статьи</a>
+        </div>
+            <a href="profil.html" class="profile-btn">
+                <i class="fas fa-user"></i>
+            </a>       
+    </nav>
+
+    <section class="hero">
+        <h1>КАМНЕРЕЗЫ ТУВЫ</h1>
+    </section>
+
+    <section class="content-section">
+        <h2>Искусство каменной резьбы</h2>
+        <p>
+            Камнерезное искусство, являясь традиционным творчеством тувинского народа, имеет всероссийский и мировой статус,
+            а скульптуры малых форм из агальматолита тувинских камнерезов находятся в сокровищницах мировых и российских музеев.
+            Мягкий камень агальматолит тувинских месторождений стал основным материалом для камнерезных изделий тувинцев.
+            Агальматолит – самый распространенный в Туве поделочный камень, называемый по-тувински «чонар-даш».
+            Название агальматолита происходит от греческих agalma–изваяние, статуя, украшения и lithos - «камень».
+            Традиционно добыча камня осуществляется в конце сентября – начале октября, когда земля начинает промерзать.
+            Причем затягивать с обработкой нельзя — агальматолит мягок и податлив только в первое время после того,
+            как извлечен из земли. Вначале на ощупь он напоминает кусок мыла — настолько у него гладкая поверхность. Но чем дольше камень лежит на воздухе, тем больше твердеет.
+            Излюбленными персонажами тувинских камнерезов являются фантастические, сказочные создания, восходящие к мотивам древней мифологии.
+            Наиболее часто попадается изображение «арзылана» (льва), который с настоящим львом (в Тыве не встречающимся) имеет мало общего.
+            Представление об «арзылане» издавна проникли в Тыву из Китая и смешались с вымыслами, легендами и мифами. В тувинском народном творчестве
+            образ арзылана стал воплощением мощи и силы, и в изображении этого существа тувинские мастера особенно щедры на выдумку. Богатая, неудержимая
+            фантазия отличает и работы Дондука Дойбухаа, который вырезал больше тысячи арзыланов. Его работа «Арзылан» из серебристо-серого камня, представленная
+            в нашем музее, особенно фантастична. Мастер вырезал из агальматолита фигуру арзылана с большой головой, разинутой пастью и поднятой мощной лапой,
+            длинным хвостом и большой гривой, украшенной орнаментальными завитками. Камнерезное искусство Тывы уже давно стало феноменом и памятником культуры, 
+            имеющим большую художественную ценность, и на сегодняшний день оно составляет одну из ярчайших граней декоративно-прикладного искусства Российской 
+            Федерации.
+        </p>
+    </section>
+
+    <div class="carousel-container">
+        <button class="carousel-btn left" aria-label="Предыдущее фото">&#10094;</button>
+        <div class="carousel">
+            <img src="foto\1главная.webp" alt="Камнерез 1" draggable="false">
+            <img src="foto\2 главная.jpg" alt="Камнерез 2" draggable="false" style="display:none;">
+            <img src="foto\3 главная.webp" alt="Камнерез 3" draggable="false" style="display:none;">
+            <img src="foto\4 главная.webp" alt="Камнерез 3" draggable="false" style="display:none;">
+            <img src="foto\5 главная.webp" alt="Камнерез 3" draggable="false" style="display:none;">
+            <img src="foto\6 главная.jpg" alt="Камнерез 3" draggable="false" style="display:none;">
+        </div>
+        <button class="carousel-btn right" aria-label="Следующее фото">&#10095;</button>
+    </div>
+    <div class="carousel-indicators">
+        <button class="carousel-dot active" aria-label="Фото 1"></button>
+        <button class="carousel-dot" aria-label="Фото 2"></button>
+        <button class="carousel-dot" aria-label="Фото 3"></button>
+        <button class="carousel-dot" aria-label="Фото 4"></button>
+        <button class="carousel-dot" aria-label="Фото 5"></button>
+        <button class="carousel-dot" aria-label="Фото 6"></button>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Искусство Тувы. Камнерезы. Все права защищены. <a href="#" style="color:#fff;text-decoration:underline;">VK</a></p>
+    </footer>
+
+    <script>
+
+        const images = document.querySelectorAll('.carousel img');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let current = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
+                img.style.opacity = i === index ? '1' : '0';
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            current = index;
+        }
+
+        document.querySelector('.carousel-btn.left').onclick = () => {
+            let idx = (current - 1 + images.length) % images.length;
+            showImage(idx);
+        };
+        document.querySelector('.carousel-btn.right').onclick = () => {
+            let idx = (current + 1) % images.length;
+            showImage(idx);
+        };
+        dots.forEach((dot, i) => {
+            dot.onclick = () => showImage(i);
+        });
+
+        let startX = null;
+        const carousel = document.querySelector('.carousel');
+        carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+        carousel.addEventListener('touchend', e => {
+            if (startX === null) return;
+            let endX = e.changedTouches[0].clientX;
+            if (endX - startX > 50) document.querySelector('.carousel-btn.left').click();
+            if (startX - endX > 50) document.querySelector('.carousel-btn.right').click();
+            startX = null;
+        });
+        showImage(0);
+    </script>
+</body>
+</html>

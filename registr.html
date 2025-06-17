@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма регистрации</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Форма регистрации</h1>
+    <form id="mailForm" method="post">
+        <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин"><br>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Введите Email"><br>
+        <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите пароль"><br>
+        <input type="password" class="form-control" name="repass" id="repass" placeholder="Повторите пароль"><br>
+        <button type="button" id="sendMail" class="btn btn-success">Отправить</button>
+
+    </form>
+    <div id="errorMess" style="color: red; font-size: 25px"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/Sendregistr.js"></script>
+</body>
+</html>
